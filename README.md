@@ -1,4 +1,4 @@
 # Hello-World
-This is my first GitHub
+For Practicing Git Commands
 
-The times changes
+See difference
