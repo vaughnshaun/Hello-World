@@ -1,4 +1,4 @@
 # Hello-World
-This is my first GitHub
+This is for git practice
 
 Changed on server
