@@ -1,0 +1,65 @@
+Git - (A Distributed Concurrent  Versions System). Basically offline repository capabilities.
+clone - Download the whole repository to your local. 
+Branch - Separate thread of development
+Tag - A version of a branch
+pull - git pull remoteurl branch (This will update the code with the remote code).
+fetch - Will update the local repository. You will have to merge it later into your working copy.
+add - Stages changes for a file. This has to be done for each file. This tells your
+local repository what changes you want to commit
+commit - Will send the add changes to the local repository.
+NOTE: you can do git commit -a -m "Message" and then you don't have to do the extra add step
+git add fileName
+git commit fileName -m "file fix" // Will commit a file at a time
+or
+git commit // Do all of the commits
+status - Will tell the status of the current branch you are on
+push - Sends changes to the server without the need of a pull request. Pull request
+is a GitHub thing. Generally you will push changes into your own branch
+HEAD - A pointer to the most recent commit of the current branch you are on
+detached head - This happens when you checkout a commit hash instead of a branch.
+When you commit changes, your changes have no branch it can go to. HEAD doesn't point
+to anything because HEAD is always the latest commit on the current branch you are on
+
+git branch -r // list all of the remote branches
+Push
+git push // This will push the current local branch to the default master branch
+git push origin commitKeyOrBranchName:RemoteBranchName // This will push the specified commit or branch to the specified remote branch
+
+Run this command below to map the upstream:
+git branch -u origin/remoteBranchName
+
+Run this command below to show the mapping:
+git branch -vv 
+git remote show origin // This shows more detail. It shows the up and down stream
+
+git push origin HEAD:remoteName // Use head if too far behind or you might need to pull
+
+git config push.default upstream // This will always default your push to the same place where your branch pulls
+
+Checkout
+git checkout branchName // This will create a new local branch. If it is the same name as one on the server. It will auto link it
+git checkout will return an error if a local branch or a server branch isn't found.
+
+
+Stash
+git stash
+git stash pop
+
+Discard the local changes (Working copy)
+git reset --hard
+
+git has a local repository with all of the history. history of you previous server
+interactions and your own commits. With git there is one working copy and a local
+repository that tracks all of the revisions. At any moment in time your working copy
+can be updated to one of these commits.
+
+press q to quit
+
+GitHub
+A branch can be modified direct at github. You can merge branches directly on github.
+When you elect this will be a pull request. The pull request must then be confirmed
+and a final merge is done.
+Fork - A clone that goes to your github account instead of your local machine
+Pull Request - I am requesting you to pull my changes from my repo into your repo.
+In Github I will typically create a fork and then do a pull request to merge my changes
+into a branch.
