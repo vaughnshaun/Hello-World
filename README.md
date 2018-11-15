@@ -1,4 +1,7 @@
 # Hello-World
-For Practicing Git Commands
 
-See difference
+This is for git practice
+
+Changed on server
+I am going to merge this to the master
+ master
